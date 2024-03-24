@@ -6,9 +6,9 @@
     "../src/Map.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport Map from './Map.svelte';\n\texport let ready;\n</script>\n\n<svelte:head>\n\t<script defer async\n\tsrc=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB1uyREZS2OOcs48tRnhmTyqt0K0E078-U&callback=initMap\">\n\t</script>\n</svelte:head>\n\n<style>\n:global(body) {\n\tpadding: 0;\n}\n</style>\n\n{ #if ready }\n<Map></Map>\n{ /if }",
+    "<script>\n\timport Map from './Map.svelte';\n\timport Search from './Search.svelte';\n\texport let ready;\n</script>\n\n<svelte:head>\n\t<script defer async\n\tsrc=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB1uyREZS2OOcs48tRnhmTyqt0K0E078-U&callback=initMap\">\n\t</script>\n</svelte:head>\n\n<style>\n:global(body) {\n\tpadding: 0;\n}\n</style>\n\n{ #if ready }\n<Search></Search>\n<Map></Map>\n{ /if }",
     "<script>\n\tlet container;\n\tlet map;\n\tlet zoom = 8;\n    let center = {lat: -34.397, lng: 150.644};\n    \n    import { onMount } from 'svelte';\n    \n\tonMount(async () => {\n\t\tmap = new google.maps.Map(container, {\n            zoom,\n            center,\n\t\t});\n\t});\n</script>\n\n<style>\n.full-screen {\n    width: 100vw;\n    height: 100vh;\n}\n</style>\n\n<div class=\"full-screen\" bind:this={container}></div>\n"
   ],
   "names": [],
-  "mappings": "AAYQ,IAAI,AAAE,CAAC,AACd,OAAO,CAAE,CAAC,AACX,CAAC;ACGD,YAAY,cAAC,CAAC,AACV,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACjB,CAAC"
+  "mappings": "AAaQ,IAAI,AAAE,CAAC,AACd,OAAO,CAAE,CAAC,AACX,CAAC;ACED,YAAY,cAAC,CAAC,AACV,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACjB,CAAC"
 }

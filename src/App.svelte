@@ -1,5 +1,6 @@
 <script>
 	import Map from './Map.svelte';
+	import Search from './Search.svelte';
 	export let ready;
 </script>
 
@@ -16,5 +17,6 @@
 </style>
 
 { #if ready }
+<Search></Search>
 <Map></Map>
 { /if }
