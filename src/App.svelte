@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<script defer async
-	src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEYs&callback=initMap">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1uyREZS2OOcs48tRnhmTyqt0K0E078-U&callback=initMap">
 	</script>
 </svelte:head>
 
