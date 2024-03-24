@@ -44,6 +44,7 @@ yarn-error.log*
 
 # Optional REPL history
 .svelte-devtools
+.svelte-kit
 
 # Output of 'npm pack'
 *.tgz
